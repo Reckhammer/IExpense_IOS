@@ -6,16 +6,83 @@
 //
 
 import SwiftUI
+import Observation
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+@Observable
+class User
+{
+    var firstName = "Joshua";
+    var lastName = "Rechkemmer";
+}
+
+struct SecondView: View
+{
+    @Environment(\.dismiss) var dismiss;
+    
+    var body: some View
+    {
+        Button("Dismiss")
+        {
+            dismiss();
         }
-        .padding()
+    }
+}
+
+struct ContentView: View 
+{
+    @State private var user = User();
+    @State private var showingSheet = false;
+    
+    @State private var numbers = [Int]();
+    @State private var currentNumber = 1;
+    
+    var body: some View
+    {
+        NavigationStack
+        {
+            VStack
+            {
+                Text("Your name is \(user.firstName) \(user.lastName)");
+                
+                TextField("First Name", text: $user.firstName);
+                TextField("Last Name", text: $user.lastName);
+                
+                VStack
+                {
+                    List
+                    {
+                        ForEach(numbers, id: \.self)
+                        {
+                            Text("Row \($0)");
+                        }
+                        .onDelete(perform: removeRows)
+                    }
+                    
+                    Button("Add Number")
+                    {
+                        numbers.append(currentNumber);
+                        currentNumber += 1;
+                    }
+                }
+                
+                Button("Show Sheet")
+                {
+                    showingSheet.toggle();
+                }
+                .sheet(isPresented: $showingSheet )
+                {
+                    SecondView();
+                }
+            }
+            .toolbar {
+                EditButton();
+            }
+        }
+    }
+    
+    func removeRows(at offsets: IndexSet)
+    {
+        numbers.remove(atOffsets: offsets);
     }
 }
 
