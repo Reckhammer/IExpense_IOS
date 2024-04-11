@@ -9,7 +9,7 @@ import SwiftUI
 import Observation
 
 @Observable
-class User
+class User : Codable
 {
     var firstName = "Joshua";
     var lastName = "Rechkemmer";
@@ -52,6 +52,16 @@ struct ContentView: View
                 Button("Tap Count: \(tapCount)")
                 {
                     tapCount += 1;
+                }
+                
+                Button("Save User")
+                {
+                    let encoder = JSONEncoder();
+                    
+                    if let data = try? encoder.encode(user)
+                    {
+                        UserDefaults.standard.set(data, forKey: "UserData");
+                    }
                 }
                 
                 VStack
