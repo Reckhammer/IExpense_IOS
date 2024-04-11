@@ -36,6 +36,8 @@ struct ContentView: View
     @State private var numbers = [Int]();
     @State private var currentNumber = 1;
     
+    @AppStorage("tapCount") private var tapCount = 0;
+    
     var body: some View
     {
         NavigationStack
@@ -46,6 +48,11 @@ struct ContentView: View
                 
                 TextField("First Name", text: $user.firstName);
                 TextField("Last Name", text: $user.lastName);
+                
+                Button("Tap Count: \(tapCount)")
+                {
+                    tapCount += 1;
+                }
                 
                 VStack
                 {
@@ -74,6 +81,7 @@ struct ContentView: View
                     SecondView();
                 }
             }
+            .padding()
             .toolbar {
                 EditButton();
             }
