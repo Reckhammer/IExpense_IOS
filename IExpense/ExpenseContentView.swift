@@ -17,7 +17,7 @@ struct ExpenseContentView: View
         {
             List
             {
-                ForEach(expenses.items, id: \.name)
+                ForEach(expenses.items)
                 {   item in
                     
                     Text(item.name);
