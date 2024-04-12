@@ -14,6 +14,7 @@
 		B877A3DE2BC8AF55007D92D1 /* ExpenseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B877A3DD2BC8AF55007D92D1 /* ExpenseContentView.swift */; };
 		B877A3E02BC8AFC3007D92D1 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B877A3DF2BC8AFC3007D92D1 /* ExpenseItem.swift */; };
 		B877A3E22BC8B006007D92D1 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = B877A3E12BC8B006007D92D1 /* Expenses.swift */; };
+		B877A3E42BC8B3BD007D92D1 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B877A3E32BC8B3BD007D92D1 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B877A3DD2BC8AF55007D92D1 /* ExpenseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseContentView.swift; sourceTree = "<group>"; };
 		B877A3DF2BC8AFC3007D92D1 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		B877A3E12BC8B006007D92D1 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		B877A3E32BC8B3BD007D92D1 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				B877A3CF2BC8A120007D92D1 /* IExpenseApp.swift */,
 				B877A3DD2BC8AF55007D92D1 /* ExpenseContentView.swift */,
+				B877A3E32BC8B3BD007D92D1 /* AddView.swift */,
 				B877A3DF2BC8AFC3007D92D1 /* ExpenseItem.swift */,
 				B877A3E12BC8B006007D92D1 /* Expenses.swift */,
 				B877A3D12BC8A120007D92D1 /* ContentView.swift */,
@@ -148,6 +151,7 @@
 			files = (
 				B877A3E22BC8B006007D92D1 /* Expenses.swift in Sources */,
 				B877A3D22BC8A120007D92D1 /* ContentView.swift in Sources */,
+				B877A3E42BC8B3BD007D92D1 /* AddView.swift in Sources */,
 				B877A3D02BC8A120007D92D1 /* IExpenseApp.swift in Sources */,
 				B877A3DE2BC8AF55007D92D1 /* ExpenseContentView.swift in Sources */,
 				B877A3E02BC8AFC3007D92D1 /* ExpenseItem.swift in Sources */,
